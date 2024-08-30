@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sadan Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Sadan Hospital</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'hospital' %}">Hospital</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'service' %}">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <a class="btn btn-outline-success mx-2" href="{% url 'login' %}" type="submit">Login</a>
+                <a class="btn btn-outline-success" href="{% url 'signup' %}" type="submit">Signup</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+     <!-- navbar -->
+     <!-- logo -->
+      <div class="row">
+        <div class="col-md-2">
+            <img src="https://marketplace.canva.com/EAFBb6P4OLs/1/0/1600w/canva-red-blue-simple-logo-hbl5vlZh180.jpg" alt="Your Image" width="250" height="250" srcset="">
+        </div>
+        <div class="col-md-8">
+           <br><br><center><h3><em>"Making Health Care Better Together"</em></h3></center>
+           <br><p class="line" style="line-height: 2;"><em>"Improving healthcare is a collective effort that requires collaboration and dedication from various stakeholders. Whether it's healthcare providers, policymakers, researchers, or the community, everyone plays a vital role in making healthcare better. By working together, sharing knowledge, and embracing innovation, we can address challenges, enhance access to quality care, and improve health outcomes for individuals and communities. Together, let's strive for a healthier future where everyone has the opportunity to thrive and live their best lives."</em></p>
+        </div>
+      </div>
+    <!-- logo -->
+    <!-- department -->
+      <style>
+        /* Hide the checkbox */
+        #info-toggle {
+            display: none;
+        }
+
+        /* Hide the information by default */
+        #information {
+            display: none;
+        }
+
+        /* When the checkbox is checked, show the information */
+        #info-toggle:checked ~ #information {
+            display: block;
+        }
+
+        /* Button styling */
+        .toggle-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <input type="checkbox" id="info-toggle">
+    <br><center><label for="info-toggle" class="toggle-button">View Departments</center></label>
+    <div id="information">
+        <div class="row my-4">
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://media.licdn.com/dms/image/D4E12AQGVHWTso2ewJQ/article-cover_image-shrink_720_1280/0/1696964506000?e=2147483647&v=beta&t=lLVcVDSWfhH6bCbzfkgyr_9Ph78UM51Y0kFN5VJC3z4" class="card-img-top" alt="..." height="250">
+                <div class="card-body">
+                    <center><h5 class="card-title">Cardiology</h5></center>
+                  <p class="card-text">"Cardiology: where every heartbeat tells a story of life and resilience."</p>
+                  <center><a href="#" class="btn btn-primary">visit</a></center>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://www.topdoctors.co.uk/files/Image/large/58b0424e-411c-4243-9228-4a0725bbab96.jpg" class="card-img-top" alt="..." height="250">
+                <div class="card-body">
+                    <center><h5 class="card-title">Neurology</h5></center>
+                  <p class="card-text">"Neurology: unlocking the mysteries of the mind, one synapse at a time."</p>
+                  <center><a href="#" class="btn btn-primary">visit</a></center>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://globemedicare.org/wp-content/uploads/2023/02/5-liver9349c0e6302864d9a5bfff0a001ce385.jpeg" class="card-img-top" alt="..." height="250">
+                <div class="card-body">
+                  <center><h5 class="card-title">Heptology</h5></center>
+                  <p class="card-text">"The liver, a silent guardian of health, finds its voice in the science of hepatology."</p>
+                  <center><a href="#" class="btn btn-primary">visit</center></a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <!-- footer -->
+    <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content border-bottom">
+            <center><li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li></center>
+          </ul>
+          <p class="text-center text-muted">© 2024 Company, Inc</p>
+        </footer>
+      </div>
+    <!-- footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
